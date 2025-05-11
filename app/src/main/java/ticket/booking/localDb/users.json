@@ -1,0 +1,145 @@
+[
+  {
+    "name": "Lovepreet Singh",
+    "password": "12345",
+    "hashed_password": "$2a$10$MqonEcizso4Re9iFEMajHOIHCUd5O3Q.XZX779C50ZnC/Hb6mirwW",
+    "tickets_booked": [
+      {
+        "ticket_id": "TN20231208XYZ",
+        "user_id": "abcdefgh",
+        "source": "Bangalore",
+        "destination": "Delhi",
+        "date_of_travel": "2023-12-08T18:30:00Z",
+        "train": {
+          "train_id": "rajdhani",
+          "train_no": "12951",
+          "seats": [[1,1,0,0,1,0],[0,0,0,1,0,0],[1,0,1,0,0,1],[0,0,0,0,0,0]],
+          "station_times": {"Mumbai":"16:35:00","Vadodara":"22:15:00","Delhi":"06:15:00"},
+          "stations": ["Mumbai","Vadodara","Delhi"],
+          "train_info": "Mumbai-Delhi Rajdhani Express"
+        },
+        "ticket_info": "Confirmed | Coach: B2 | Seat: 12 | PNR: 1234567890"
+      }
+    ],
+    "user_id": "abcdefgh"
+  },
+  {
+    "name": "Priya Sharma",
+    "password": "priya@2023",
+    "hashed_password": "$2a$10$kLm9nXyVpzO7WqQF5dZsE.9gZJ7hTbH8wLk2vRtYHjK5X1Nc7YbQW",
+    "tickets_booked": [
+      {
+        "ticket_id": "TN20240115ABC",
+        "user_id": "pqrstuvw",
+        "source": "Delhi",
+        "destination": "Jaipur",
+        "date_of_travel": "2024-01-15T06:00:00Z",
+        "train": {
+          "train_id": "shatabdi",
+          "train_no": "12001",
+          "seats": [[1,1,1,1,1,1],[0,0,0,0,0,0],[1,1,0,0,0,0],[0,0,0,0,0,0]],
+          "station_times": {"Delhi":"06:00:00","Jaipur":"10:30:00"},
+          "stations": ["Delhi","Jaipur"],
+          "train_info": "Delhi-Jaipur Shatabdi Express"
+        },
+        "ticket_info": "Confirmed | Coach: C1 | Seat: 05 | PNR: 9876543210"
+      }
+    ],
+    "user_id": "pqrstuvw"
+  },
+  {
+    "name": "Rahul Verma",
+    "password": "rahulV@123",
+    "hashed_password": "$2a$10$5YhW9mQpFd7sLk8HjTnZ3.4vXcR2qS1PwKbN0lIiJyGt5vOz6Mn7a",
+    "tickets_booked": [
+      {
+        "ticket_id": "TN20240220DEF",
+        "user_id": "lmnopqrs",
+        "source": "Bangalore",
+        "destination": "Chennai",
+        "date_of_travel": "2024-02-20T20:30:00Z",
+        "train": {
+          "train_id": "duronto",
+          "train_no": "12213",
+          "seats": [[1,0,0,0,0,0],[0,0,0,0,0,0],[1,1,1,0,0,0],[0,0,0,0,1,0]],
+          "station_times": {"Bangalore":"20:30:00","Chennai":"06:15:00"},
+          "stations": ["Bangalore","Chennai"],
+          "train_info": "Bangalore-Chennai Duronto Express"
+        },
+        "ticket_info": "Waiting (WL 3) | PNR: 4567890123"
+      }
+    ],
+    "user_id": "lmnopqrs"
+  },
+  {
+    "name": "Amit Patel",
+    "password": "amitP@456",
+    "hashed_password": "$2a$10$8GhT2vQpLk5sRfW3xYnZz.7vJkL9mN0bVc1Xz2yHdE4rT5uIw7Mn6",
+    "tickets_booked": [
+      {
+        "ticket_id": "TN20240310GHI",
+        "user_id": "xyzabcde",
+        "source": "Ahmedabad",
+        "destination": "Pune",
+        "date_of_travel": "2024-03-10T08:15:00Z",
+        "train": {
+          "train_id": "garibrath",
+          "train_no": "12953",
+          "seats": [[1,0,1,0,1,0],[0,1,0,1,0,1],[0,0,0,0,0,0],[1,1,1,1,1,1]],
+          "station_times": {"Ahmedabad":"08:15:00","Mumbai":"14:45:00","Pune":"18:30:00"},
+          "stations": ["Ahmedabad","Mumbai","Pune"],
+          "train_info": "Ahmedabad-Pune Garib Rath"
+        },
+        "ticket_info": "Confirmed | Coach: A3 | Seat: 21 | PNR: 7890123456"
+      },
+      {
+        "ticket_id": "TN20231225JKL",
+        "user_id": "xyzabcde",
+        "source": "Delhi",
+        "destination": "Bhopal",
+        "date_of_travel": "2023-12-25T06:00:00Z",
+        "train": {
+          "train_id": "vande_bharat",
+          "train_no": "20901",
+          "seats": [[1,1,1,1,1,1],[1,1,1,1,1,1],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+          "station_times": {"Delhi":"06:00:00","Agra":"08:15:00","Jhansi":"10:45:00","Bhopal":"13:30:00"},
+          "stations": ["Delhi","Agra","Jhansi","Bhopal"],
+          "train_info": "Delhi-Bhopal Vande Bharat Express"
+        },
+        "ticket_info": "Confirmed | Coach: VB1 | Seat: 08 | PNR: 3456789012"
+      }
+    ],
+    "user_id": "xyzabcde"
+  },
+  {
+    "name": "Neha Gupta",
+    "password": "nehaG@789",
+    "hashed_password": "$2a$10$3RtYhW9mQpFd7sLk8HjTnZ.4vXcR2qS1PwKbN0lIiJyGt5vOz6Mn7a",
+    "tickets_booked": [],
+    "user_id": "fghijklm"
+  },
+  {
+    "name": "Aaryan Soni",
+    "password": "aaryan2022",
+    "hashed_password": "$2a$10$3KlLYeaTlmnApfsStztGHeJArfrsPGpaWrjIcaqiv7fGk42276RMi",
+    "tickets_booked": [
+      {
+        "ticket_id": "TN20240105MNO",
+        "user_id": "1c7a0eae-afe7-4924-a94b-8db788b77b6f",
+        "source": "Mumbai",
+        "destination": "Delhi",
+        "date_of_travel": "2024-01-05T16:35:00Z",
+        "train": {
+          "train_id": "rajdhani",
+          "train_no": "12951",
+          "seats": [[1,1,0,0,1,0],[0,0,0,1,0,0],[1,0,1,0,0,1],[0,0,0,0,0,0]],
+          "station_times": {"Mumbai":"16:35:00","Vadodara":"22:15:00","Delhi":"06:15:00"},
+          "stations": ["Mumbai","Vadodara","Delhi"],
+          "train_info": "Mumbai-Delhi Rajdhani Express"
+        },
+        "ticket_info": "Confirmed | Coach: B1 | Seat: 15 | PNR: 5678901234"
+      }
+    ],
+    "user_id": "1c7a0eae-afe7-4924-a94b-8db788b77b6f"
+  }
+]
