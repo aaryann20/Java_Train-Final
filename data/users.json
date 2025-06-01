@@ -6,4 +6,12 @@
   "phone" : "9630679441",
   "name" : "aaryan20",
   "tickets" : [ ]
+}, {
+  "userId" : "1e032836-1a42-4ce1-a5ef-b9a3ac0cad37",
+  "username" : "rishab",
+  "password" : "$2a$10$KgcmukM6Qkn.6tJ/7YF1kuMd5O66/wH2ZvvGEbgg0I6VWrdzo596q",
+  "email" : "sasas",
+  "phone" : "89292842",
+  "name" : "rishab",
+  "tickets" : [ ]
 } ]
