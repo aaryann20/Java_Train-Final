@@ -1,0 +1,289 @@
+[ {
+  "train_id" : "rajdhani_mumbai",
+  "train_no" : "12951",
+  "seats" : [ [ 1, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0 ] ],
+  "station_times" : {
+    "mumbai" : "16:35:00",
+    "kota" : "02:30:00",
+    "vadodara" : "22:15:00",
+    "surat" : "19:45:00",
+    "delhi" : "06:15:00"
+  },
+  "stations" : [ "mumbai", "surat", "vadodara", "kota", "delhi" ],
+  "train_info" : "Train ID: rajdhani_mumbai Train No: 12951"
+}, {
+  "train_id" : "rajdhani_kolkata",
+  "train_no" : "12301",
+  "seats" : [ [ 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 1 ], [ 0, 1, 0, 0, 1, 1 ], [ 0, 1, 0, 1, 0, 1 ] ],
+  "station_times" : {
+    "gaya" : "22:15:00",
+    "kolkata" : "16:55:00",
+    "dhanbad" : "20:30:00",
+    "mughalsarai" : "03:15:00",
+    "delhi" : "10:00:00",
+    "patna" : "00:40:00"
+  },
+  "stations" : [ "kolkata", "dhanbad", "gaya", "patna", "mughalsarai", "delhi" ],
+  "train_info" : "Train ID: rajdhani_kolkata Train No: 12301"
+}, {
+  "train_id" : "rajdhani_chennai",
+  "train_no" : "12433",
+  "seats" : [ [ 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 0 ] ],
+  "station_times" : {
+    "vijayawada" : "12:30:00",
+    "nagpur" : "20:45:00",
+    "jhansi" : "05:30:00",
+    "bhopal" : "02:15:00",
+    "chennai" : "06:10:00",
+    "delhi" : "10:55:00"
+  },
+  "stations" : [ "chennai", "vijayawada", "nagpur", "bhopal", "jhansi", "delhi" ],
+  "train_info" : "Train ID: rajdhani_chennai Train No: 12433"
+}, {
+  "train_id" : "rajdhani_bengaluru",
+  "train_no" : "22691",
+  "seats" : [ [ 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 1, 1, 1 ] ],
+  "station_times" : {
+    "bengaluru" : "20:00:00",
+    "nagpur" : "12:15:00",
+    "secunderabad" : "05:30:00",
+    "jhansi" : "21:30:00",
+    "bhopal" : "17:45:00",
+    "delhi" : "05:55:00"
+  },
+  "stations" : [ "bengaluru", "secunderabad", "nagpur", "bhopal", "jhansi", "delhi" ],
+  "train_info" : "Train ID: rajdhani_bengaluru Train No: 22691"
+}, {
+  "train_id" : "shatabdi_delhi_jaipur",
+  "train_no" : "12015",
+  "seats" : [ [ 0, 0, 0, 0, 0, 1 ], [ 1, 0, 0, 0, 0, 1 ], [ 0, 1, 1, 1, 1, 0 ], [ 0, 0, 0, 1, 0, 0 ] ],
+  "station_times" : {
+    "jaipur" : "10:05:00",
+    "gurgaon" : "06:40:00",
+    "alwar" : "08:15:00",
+    "delhi" : "06:05:00"
+  },
+  "stations" : [ "delhi", "gurgaon", "alwar", "jaipur" ],
+  "train_info" : "Train ID: shatabdi_delhi_jaipur Train No: 12015"
+}, {
+  "train_id" : "shatabdi_delhi_lucknow",
+  "train_no" : "12003",
+  "seats" : [ [ 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 1 ] ],
+  "station_times" : {
+    "ghaziabad" : "06:40:00",
+    "aligarh" : "08:05:00",
+    "kanpur" : "10:45:00",
+    "lucknow" : "12:40:00",
+    "delhi" : "06:10:00"
+  },
+  "stations" : [ "delhi", "ghaziabad", "aligarh", "kanpur", "lucknow" ],
+  "train_info" : "Train ID: shatabdi_delhi_lucknow Train No: 12003"
+}, {
+  "train_id" : "shatabdi_mumbai_ahmedabad",
+  "train_no" : "12009",
+  "seats" : [ [ 1, 1, 0, 0, 1, 0 ], [ 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 1, 0 ] ],
+  "station_times" : {
+    "mumbai" : "06:25:00",
+    "borivali" : "07:00:00",
+    "vadodara" : "10:35:00",
+    "surat" : "08:55:00",
+    "ahmedabad" : "12:25:00"
+  },
+  "stations" : [ "mumbai", "borivali", "surat", "vadodara", "ahmedabad" ],
+  "train_info" : "Train ID: shatabdi_mumbai_ahmedabad Train No: 12009"
+}, {
+  "train_id" : "shatabdi_chennai_bengaluru",
+  "train_no" : "12027",
+  "seats" : [ [ 0, 0, 1, 1, 1, 1 ], [ 0, 0, 1, 0, 1, 0 ], [ 0, 1, 1, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0 ] ],
+  "station_times" : {
+    "bengaluru" : "11:00:00",
+    "katpadi" : "08:10:00",
+    "chennai" : "06:00:00"
+  },
+  "stations" : [ "chennai", "katpadi", "bengaluru" ],
+  "train_info" : "Train ID: shatabdi_chennai_bengaluru Train No: 12027"
+}, {
+  "train_id" : "duronto_mumbai_kolkata",
+  "train_no" : "12261",
+  "seats" : [ [ 0, 0, 0, 0, 1, 0 ], [ 1, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 1, 1, 1 ], [ 1, 1, 0, 1, 1, 0 ] ],
+  "station_times" : {
+    "mumbai" : "11:05:00",
+    "raipur" : "04:15:00",
+    "kolkata" : "16:05:00",
+    "nagpur" : "22:30:00"
+  },
+  "stations" : [ "mumbai", "nagpur", "raipur", "kolkata" ],
+  "train_info" : "Train ID: duronto_mumbai_kolkata Train No: 12261"
+}, {
+  "train_id" : "duronto_chennai_coimbatore",
+  "train_no" : "12243",
+  "seats" : [ [ 0, 1, 0, 0, 1, 0 ], [ 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 1, 0 ] ],
+  "station_times" : {
+    "coimbatore" : "05:30:00",
+    "salem" : "02:30:00",
+    "erode" : "03:45:00",
+    "chennai" : "22:15:00"
+  },
+  "stations" : [ "chennai", "salem", "erode", "coimbatore" ],
+  "train_info" : "Train ID: duronto_chennai_coimbatore Train No: 12243"
+}, {
+  "train_id" : "duronto_delhi_jammu",
+  "train_no" : "12265",
+  "seats" : [ [ 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 1 ], [ 0, 1, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0 ] ],
+  "station_times" : {
+    "ambala" : "00:30:00",
+    "jalandhar" : "03:30:00",
+    "delhi" : "22:00:00",
+    "jammu" : "07:00:00",
+    "ludhiana" : "02:15:00"
+  },
+  "stations" : [ "delhi", "ambala", "ludhiana", "jalandhar", "jammu" ],
+  "train_info" : "Train ID: duronto_delhi_jammu Train No: 12265"
+}, {
+  "train_id" : "duronto_bengaluru_chennai",
+  "train_no" : "12213",
+  "seats" : [ [ 1, 1, 0, 0, 1, 0 ], [ 0, 0, 0, 0, 0, 1 ], [ 0, 0, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 0, 0 ] ],
+  "station_times" : {
+    "bengaluru" : "22:15:00",
+    "katpadi" : "01:30:00",
+    "chennai" : "04:30:00"
+  },
+  "stations" : [ "bengaluru", "katpadi", "chennai" ],
+  "train_info" : "Train ID: duronto_bengaluru_chennai Train No: 12213"
+}, {
+  "train_id" : "vande_bharat_delhi_varanasi",
+  "train_no" : "22435",
+  "seats" : [ [ 1, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 1, 1 ], [ 1, 1, 1, 1, 0, 1 ], [ 0, 1, 0, 0, 0, 0 ] ],
+  "station_times" : {
+    "kanpur" : "10:30:00",
+    "varanasi" : "14:00:00",
+    "delhi" : "06:00:00",
+    "prayagraj" : "12:45:00"
+  },
+  "stations" : [ "delhi", "kanpur", "prayagraj", "varanasi" ],
+  "train_info" : "Train ID: vande_bharat_delhi_varanasi Train No: 22435"
+}, {
+  "train_id" : "vande_bharat_mumbai_ahmedabad",
+  "train_no" : "20901",
+  "seats" : [ [ 1, 1, 0, 0, 1, 0 ], [ 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0 ] ],
+  "station_times" : {
+    "mumbai" : "06:00:00",
+    "vadodara" : "09:30:00",
+    "surat" : "07:55:00",
+    "ahmedabad" : "11:25:00"
+  },
+  "stations" : [ "mumbai", "surat", "vadodara", "ahmedabad" ],
+  "train_info" : "Train ID: vande_bharat_mumbai_ahmedabad Train No: 20901"
+}, {
+  "train_id" : "vande_bharat_chennai_mysuru",
+  "train_no" : "20607",
+  "seats" : [ [ 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 1, 0, 1 ], [ 0, 0, 0, 0, 1, 1 ] ],
+  "station_times" : {
+    "bengaluru" : "10:20:00",
+    "chennai" : "05:50:00",
+    "mysuru" : "12:30:00"
+  },
+  "stations" : [ "chennai", "bengaluru", "mysuru" ],
+  "train_info" : "Train ID: vande_bharat_chennai_mysuru Train No: 20607"
+}, {
+  "train_id" : "vande_bharat_delhi_bhopal",
+  "train_no" : "20173",
+  "seats" : [ [ 1, 0, 1, 1, 0, 0 ], [ 0, 0, 1, 0, 0, 0 ], [ 0, 1, 0, 0, 1, 1 ], [ 1, 0, 0, 1, 0, 0 ] ],
+  "station_times" : {
+    "agra" : "08:15:00",
+    "jhansi" : "10:45:00",
+    "bhopal" : "13:30:00",
+    "delhi" : "06:00:00",
+    "gwalior" : "09:45:00"
+  },
+  "stations" : [ "delhi", "agra", "gwalior", "jhansi", "bhopal" ],
+  "train_info" : "Train ID: vande_bharat_delhi_bhopal Train No: 20173"
+}, {
+  "train_id" : "superfast_mumbai_goa",
+  "train_no" : "12051",
+  "seats" : [ [ 0, 1, 0, 0, 1, 0 ], [ 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 0, 1 ], [ 0, 0, 1, 0, 1, 1 ] ],
+  "station_times" : {
+    "mumbai" : "09:10:00",
+    "vasco_da_gama" : "20:30:00",
+    "madgaon" : "19:45:00",
+    "ratnagiri" : "14:30:00"
+  },
+  "stations" : [ "mumbai", "ratnagiri", "madgaon", "vasco_da_gama" ],
+  "train_info" : "Train ID: superfast_mumbai_goa Train No: 12051"
+}, {
+  "train_id" : "superfast_delhi_amritsar",
+  "train_no" : "12459",
+  "seats" : [ [ 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1 ], [ 1, 1, 1, 1, 0, 0 ], [ 0, 0, 1, 0, 0, 0 ] ],
+  "station_times" : {
+    "ambala" : "10:30:00",
+    "jalandhar" : "13:30:00",
+    "delhi" : "07:20:00",
+    "amritsar" : "14:45:00",
+    "ludhiana" : "12:15:00"
+  },
+  "stations" : [ "delhi", "ambala", "ludhiana", "jalandhar", "amritsar" ],
+  "train_info" : "Train ID: superfast_delhi_amritsar Train No: 12459"
+}, {
+  "train_id" : "superfast_chennai_hyderabad",
+  "train_no" : "12603",
+  "seats" : [ [ 0, 1, 1, 0, 0, 0 ], [ 1, 1, 1, 0, 0, 1 ], [ 0, 0, 0, 1, 1, 0 ], [ 1, 0, 0, 0, 1, 0 ] ],
+  "station_times" : {
+    "nellore" : "20:30:00",
+    "hyderabad" : "06:15:00",
+    "vijayawada" : "00:45:00",
+    "ongole" : "22:15:00",
+    "chennai" : "17:45:00"
+  },
+  "stations" : [ "chennai", "nellore", "ongole", "vijayawada", "hyderabad" ],
+  "train_info" : "Train ID: superfast_chennai_hyderabad Train No: 12603"
+}, {
+  "train_id" : "superfast_kolkata_puri",
+  "train_no" : "12837",
+  "seats" : [ [ 0, 0, 1, 1, 0, 0 ], [ 0, 0, 0, 1, 1, 0 ], [ 0, 1, 0, 0, 0, 0 ], [ 1, 0, 0, 0, 1, 0 ] ],
+  "station_times" : {
+    "kolkata" : "08:30:00",
+    "balasore" : "12:00:00",
+    "puri" : "16:00:00",
+    "kharagpur" : "10:15:00",
+    "bhubaneswar" : "14:30:00"
+  },
+  "stations" : [ "kolkata", "kharagpur", "balasore", "bhubaneswar", "puri" ],
+  "train_info" : "Train ID: superfast_kolkata_puri Train No: 12837"
+}, {
+  "train_id" : "passenger_delhi_chandigarh",
+  "train_no" : "54011",
+  "seats" : [ [ 0, 0, 1, 0, 0, 1 ], [ 0, 1, 0, 0, 1, 1 ], [ 0, 1, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 1 ] ],
+  "station_times" : {
+    "ambala" : "10:30:00",
+    "panipat" : "07:30:00",
+    "chandigarh" : "12:00:00",
+    "delhi" : "05:55:00",
+    "karnal" : "08:45:00"
+  },
+  "stations" : [ "delhi", "panipat", "karnal", "ambala", "chandigarh" ],
+  "train_info" : "Train ID: passenger_delhi_chandigarh Train No: 54011"
+}, {
+  "train_id" : "passenger_mumbai_pune",
+  "train_no" : "51301",
+  "seats" : [ [ 1, 1, 0, 1, 1, 0 ], [ 1, 1, 0, 1, 1, 1 ], [ 0, 0, 0, 0, 1, 0 ], [ 0, 1, 0, 0, 0, 1 ] ],
+  "station_times" : {
+    "mumbai" : "07:15:00",
+    "karjat" : "08:45:00",
+    "lonavala" : "09:30:00",
+    "pune" : "11:15:00"
+  },
+  "stations" : [ "mumbai", "karjat", "lonavala", "pune" ],
+  "train_info" : "Train ID: passenger_mumbai_pune Train No: 51301"
+}, {
+  "train_id" : "passenger_chennai_pondicherry",
+  "train_no" : "56037",
+  "seats" : [ [ 1, 0, 1, 0, 0, 1 ], [ 0, 0, 1, 0, 0, 0 ], [ 1, 0, 1, 0, 0, 1 ], [ 1, 1, 0, 0, 1, 0 ] ],
+  "station_times" : {
+    "villupuram" : "09:45:00",
+    "chengalpattu" : "07:30:00",
+    "pondicherry" : "11:00:00",
+    "chennai" : "06:05:00"
+  },
+  "stations" : [ "chennai", "chengalpattu", "villupuram", "pondicherry" ],
+  "train_info" : "Train ID: passenger_chennai_pondicherry Train No: 56037"
+} ]
