@@ -1,0 +1,152 @@
+[
+  {
+    "train_id": "rajdhani_mumbai",
+    "train_no": "12951",
+    "seats": [
+      [0, 0, 0, 1, 0, 0],
+      [0, 1, 0, 0, 0, 1],
+      [1, 0, 0, 0, 1, 0],
+      [0, 0, 1, 0, 0, 0]
+    ],
+    "station_times": {
+      "mumbai": "16:35:00",
+      "surat": "19:45:00",
+      "vadodara": "22:15:00",
+      "kota": "02:30:00",
+      "delhi": "06:15:00"
+    },
+    "stations": ["mumbai", "surat", "vadodara", "kota", "delhi"],
+    "train_info": "Train ID: rajdhani_mumbai Train No: 12951"
+  },
+  {
+    "train_id": "rajdhani_kolkata",
+    "train_no": "12301",
+    "seats": [
+      [1, 0, 0, 0, 0, 1],
+      [0, 0, 1, 0, 0, 0],
+      [0, 1, 0, 0, 1, 0],
+      [0, 0, 0, 1, 0, 0]
+    ],
+    "station_times": {
+      "kolkata": "16:55:00",
+      "dhanbad": "20:30:00",
+      "gaya": "22:15:00",
+      "patna": "00:40:00",
+      "mughalsarai": "03:15:00",
+      "delhi": "10:00:00"
+    },
+    "stations": ["kolkata", "dhanbad", "gaya", "patna", "mughalsarai", "delhi"],
+    "train_info": "Train ID: rajdhani_kolkata Train No: 12301"
+  },
+  {
+    "train_id": "rajdhani_chennai",
+    "train_no": "12433",
+    "seats": [
+      [0, 0, 1, 0, 0, 0],
+      [1, 0, 0, 0, 1, 0],
+      [0, 0, 0, 1, 0, 0],
+      [0, 1, 0, 0, 0, 1]
+    ],
+    "station_times": {
+      "chennai": "06:10:00",
+      "vijayawada": "12:30:00",
+      "nagpur": "20:45:00",
+      "bhopal": "02:15:00",
+      "jhansi": "05:30:00",
+      "delhi": "10:55:00"
+    },
+    "stations": ["chennai", "vijayawada", "nagpur", "bhopal", "jhansi", "delhi"],
+    "train_info": "Train ID: rajdhani_chennai Train No: 12433"
+  },
+  {
+    "train_id": "shatabdi_delhi_jaipur",
+    "train_no": "12015",
+    "seats": [
+      [0, 1, 0, 0, 0, 1],
+      [0, 0, 0, 1, 0, 0],
+      [1, 0, 0, 0, 1, 0],
+      [0, 0, 1, 0, 0, 0]
+    ],
+    "station_times": {
+      "delhi": "06:05:00",
+      "gurgaon": "06:40:00",
+      "alwar": "08:15:00",
+      "jaipur": "10:05:00"
+    },
+    "stations": ["delhi", "gurgaon", "alwar", "jaipur"],
+    "train_info": "Train ID: shatabdi_delhi_jaipur Train No: 12015"
+  },
+  {
+    "train_id": "duronto_bengaluru_chennai",
+    "train_no": "12213",
+    "seats": [
+      [1, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [1, 1, 1, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0]
+    ],
+    "station_times": {
+      "bengaluru": "22:15:00",
+      "katpadi": "01:30:00",
+      "chennai": "04:30:00"
+    },
+    "stations": ["bengaluru", "katpadi", "chennai"],
+    "train_info": "Train ID: duronto_bengaluru_chennai Train No: 12213"
+  },
+  {
+    "train_id": "vande_bharat_delhi_bhopal",
+    "train_no": "20173",
+    "seats": [
+      [1, 1, 0, 0, 0, 0],
+      [0, 0, 0, 1, 1, 1],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0]
+    ],
+    "station_times": {
+      "delhi": "06:00:00",
+      "agra": "08:15:00",
+      "gwalior": "09:45:00",
+      "jhansi": "10:45:00",
+      "bhopal": "13:30:00"
+    },
+    "stations": ["delhi", "agra", "gwalior", "jhansi", "bhopal"],
+    "train_info": "Train ID: vande_bharat_delhi_bhopal Train No: 20173"
+  },
+  {
+    "train_id": "superfast_mumbai_goa",
+    "train_no": "12051",
+    "seats": [
+      [0, 0, 1, 0, 1, 0],
+      [1, 0, 0, 0, 0, 1],
+      [0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 1, 0, 0]
+    ],
+    "station_times": {
+      "mumbai": "09:10:00",
+      "ratnagiri": "14:30:00",
+      "madgaon": "19:45:00",
+      "vasco_da_gama": "20:30:00"
+    },
+    "stations": ["mumbai", "ratnagiri", "madgaon", "vasco_da_gama"],
+    "train_info": "Train ID: superfast_mumbai_goa Train No: 12051"
+  },
+  {
+    "train_id": "passenger_delhi_chandigarh",
+    "train_no": "54011",
+    "seats": [
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0]
+    ],
+    "station_times": {
+      "delhi": "05:55:00",
+      "panipat": "07:30:00",
+      "karnal": "08:45:00",
+      "ambala": "10:30:00",
+      "chandigarh": "12:00:00"
+    },
+    "stations": ["delhi", "panipat", "karnal", "ambala", "chandigarh"],
+    "train_info": "Train ID: passenger_delhi_chandigarh Train No: 54011"
+  }
+]

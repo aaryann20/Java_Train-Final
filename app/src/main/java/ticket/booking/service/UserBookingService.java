@@ -1,251 +1,209 @@
 package ticket.booking.service;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import ticket.booking.entities.Ticket;
 import ticket.booking.entities.Train;
 import ticket.booking.entities.User;
-import ticket.booking.util.UserServiceUtil;
+import ticket.booking.util.DatabaseManager;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 /**
- * Service class for user authentication and booking operations
+ * Service class for managing user bookings
  */
 public class UserBookingService {
-
-    private static final String USER_FILE_PATH = "app/src/main/java/ticket/booking/localDb/users.json";
-
-    private final ObjectMapper objectMapper;
-    private List<User> userList;
     private User currentUser;
-    private TrainService trainService;
+    private List<Ticket> userTickets;
 
-    /**
-     * Constructor for general operations (signup, etc.)
-     */
-    public UserBookingService() throws IOException {
-        this.objectMapper = new ObjectMapper();
-        loadUserListFromFile();
-        this.trainService = new TrainService();
+    public UserBookingService() {
+        this.userTickets = new ArrayList<>();
     }
 
     /**
-     * Constructor for logged-in user operations
+     * Sets the current logged-in user
      */
-    public UserBookingService(User user) throws IOException {
-        this();
+    public void setCurrentUser(User user) {
         this.currentUser = user;
-
-        // Find and use the full user data from the list
-        Optional<User> foundUser = userList.stream()
-                .filter(u -> u.getName().equals(user.getName()) &&
-                        UserServiceUtil.checkPassword(user.getPassword(), u.getHashedPassword()))
-                .findFirst();
-
-        if (foundUser.isPresent()) {
-            this.currentUser = foundUser.get();
-        }
+        fetchBookings();
     }
 
     /**
-     * Load users from file
-     */
-    private void loadUserListFromFile() throws IOException {
-        File usersFile = new File(USER_FILE_PATH);
-
-        // Create directory and file if they don't exist
-        if (!usersFile.exists()) {
-            File dir = new File(usersFile.getParent());
-            if (!dir.exists()) {
-                dir.mkdirs();
-            }
-            usersFile.createNewFile();
-
-            // Initialize with empty array
-            objectMapper.writeValue(usersFile, new ArrayList<User>());
-        }
-
-        userList = objectMapper.readValue(usersFile, new TypeReference<List<User>>() {});
-    }
-
-    /**
-     * Save users to file
-     */
-    private void saveUserListToFile() throws IOException {
-        File usersFile = new File(USER_FILE_PATH);
-        objectMapper.writeValue(usersFile, userList);
-    }
-
-    /**
-     * Check login credentials
-     */
-    public Boolean loginUser() {
-        if (currentUser == null) {
-            return false;
-        }
-
-        Optional<User> foundUser = userList.stream()
-                .filter(user -> user.getName().equals(currentUser.getName()) &&
-                        UserServiceUtil.checkPassword(currentUser.getPassword(), user.getHashedPassword()))
-                .findFirst();
-
-        return foundUser.isPresent();
-    }
-
-    /**
-     * Register a new user
-     */
-    public Boolean signUp(User newUser) {
-        try {
-            // Check if username already exists
-            boolean usernameExists = userList.stream()
-                    .anyMatch(user -> user.getName().equals(newUser.getName()));
-
-            if (usernameExists) {
-                return false;
-            }
-
-            userList.add(newUser);
-            saveUserListToFile();
-            return true;
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            return false;
-        }
-    }
-
-    /**
-     * Get current user
+     * Gets the current logged-in user
      */
     public User getCurrentUser() {
         return currentUser;
     }
 
     /**
-     * Print all tickets belonging to the current user
+     * Fetches all bookings for the current user
      */
     public void fetchBookings() {
-        if (currentUser != null && currentUser.getTicketsBooked() != null) {
-            currentUser.printTickets();
+        // In a real application, this would fetch from a database
+        // For now, we'll use a simple in-memory list
+        userTickets = new ArrayList<>();
+
+        // Add some mock data if needed
+        if (currentUser != null) {
+            System.out.println("User has " + userTickets.size() + " tickets.");
+            for (Ticket ticket : userTickets) {
+                System.out.println("Ticket ID: " + ticket.getTicketId() +
+                        " belongs to User " + ticket.getUserId() +
+                        " from " + ticket.getSource() +
+                        " to " + ticket.getDestination() +
+                        " on " + ticket.getDateOfTravel());
+            }
         }
     }
 
     /**
-     * Get tickets belonging to current user
+     * Gets all tickets for the current user
      */
     public List<Ticket> getUserTickets() {
-        if (currentUser != null && currentUser.getTicketsBooked() != null) {
-            return currentUser.getTicketsBooked();
-        }
-        return new ArrayList<>();
+        return userTickets;
     }
 
     /**
-     * Cancel a booking by ticket ID
-     */
-    public Boolean cancelBooking(String ticketId) {
-        if (currentUser == null || ticketId == null || ticketId.isEmpty()) {
-            return false;
-        }
-
-        List<Ticket> tickets = currentUser.getTicketsBooked();
-        boolean removed = tickets.removeIf(ticket -> ticket.getTicketId().equals(ticketId));
-
-        if (removed) {
-            try {
-                // Update the user in the list
-                updateCurrentUserInList();
-                saveUserListToFile();
-                return true;
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
-        }
-
-        return false;
-    }
-
-    /**
-     * Search for trains between source and destination
+     * Gets trains between source and destination
      */
     public List<Train> getTrains(String source, String destination) {
-        try {
-            return trainService.searchTrains(source, destination);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return new ArrayList<>();
-        }
-    }
+        List<Train> allTrains = DatabaseManager.loadTrains();
+        List<Train> matchingTrains = new ArrayList<>();
 
-    /**
-     * Get the seat map for a train
-     */
-    public List<List<Integer>> fetchSeats(Train train) {
-        return train.getSeats();
-    }
+        for (Train train : allTrains) {
+            List<String> stations = train.getStations();
+            if (stations != null) {
+                int sourceIndex = -1;
+                int destIndex = -1;
 
-    /**
-     * Book a seat on a train
-     */
-    public Boolean bookTrainSeat(Train train, int row, int seat) {
-        try {
-            List<List<Integer>> seats = train.getSeats();
-            if (row >= 0 && row < seats.size() && seat >= 0 && seat < seats.get(row).size()) {
-                if (seats.get(row).get(seat) == 0) {
-                    seats.get(row).set(seat, 1);
-                    train.setSeats(seats);
-                    trainService.updateTrain(train);
-                    return true;
+                // Find indices of source and destination stations
+                for (int i = 0; i < stations.size(); i++) {
+                    if (stations.get(i).equalsIgnoreCase(source)) {
+                        sourceIndex = i;
+                    }
+                    if (stations.get(i).equalsIgnoreCase(destination)) {
+                        destIndex = i;
+                    }
+                }
+
+                // Add train if source comes before destination
+                if (sourceIndex >= 0 && destIndex >= 0 && sourceIndex < destIndex) {
+                    matchingTrains.add(train);
                 }
             }
-            return false;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return false;
         }
+
+        return matchingTrains;
     }
 
     /**
-     * Add a ticket to the current user
+     * Books a seat on a train
      */
-    public void addTicketToUser(Ticket ticket) throws IOException {
-        if (currentUser == null) {
-            throw new IllegalStateException("No user is logged in");
-        }
+    public boolean bookTrainSeat(Train train, int row, int col) {
+        try {
+            // Update the seat status in the train object
+            List<List<Integer>> seats = train.getSeats();
+            if (row >= 0 && row < seats.size() &&
+                    col >= 0 && col < seats.get(row).size()) {
 
-        List<Ticket> tickets = currentUser.getTicketsBooked();
-        if (tickets == null) {
-            tickets = new ArrayList<>();
-            currentUser.setTicketsBooked(tickets);
-        }
+                // Check if seat is available
+                if (seats.get(row).get(col) != 0) {
+                    return false; // Seat already booked
+                }
 
-        tickets.add(ticket);
+                // Mark seat as booked
+                seats.get(row).set(col, 1);
+                train.setSeats(seats);
 
-        // Update user in list
-        updateCurrentUserInList();
-        saveUserListToFile();
-    }
+                // Create a new ticket
+                String ticketId = "TN" + System.currentTimeMillis();
+                Ticket ticket = new Ticket(
+                        ticketId,
+                        currentUser.getUserId(),
+                        "Source", // Replace with actual source
+                        "Destination", // Replace with actual destination
+                        java.time.LocalDate.now().toString(),
+                        train
+                );
 
-    /**
-     * Update the current user in the user list
-     */
-    private void updateCurrentUserInList() {
-        if (currentUser == null) {
-            return;
-        }
+                // Add to user's tickets
+                userTickets.add(ticket);
 
-        for (int i = 0; i < userList.size(); i++) {
-            if (userList.get(i).getUserId().equals(currentUser.getUserId())) {
-                userList.set(i, currentUser);
-                break;
+                // Update train in database
+                List<Train> allTrains = DatabaseManager.loadTrains();
+                for (int i = 0; i < allTrains.size(); i++) {
+                    if (allTrains.get(i).getTrainId().equals(train.getTrainId())) {
+                        allTrains.set(i, train);
+                        break;
+                    }
+                }
+                DatabaseManager.saveTrains(allTrains);
+
+                return true;
             }
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * Cancels a booking
+     */
+    public boolean cancelBooking(String ticketId) {
+        try {
+            Ticket ticketToRemove = null;
+
+            // Find the ticket
+            for (Ticket ticket : userTickets) {
+                if (ticket.getTicketId().equals(ticketId)) {
+                    ticketToRemove = ticket;
+                    break;
+                }
+            }
+
+            if (ticketToRemove != null) {
+                // Remove from user's tickets
+                userTickets.remove(ticketToRemove);
+
+                // Update seat status in train
+                Train train = ticketToRemove.getTrain();
+
+                // Find the seat (this is simplified - in a real app you'd store seat info in the ticket)
+                // For now, we'll just find any seat that's booked
+                List<List<Integer>> seats = train.getSeats();
+                boolean seatFound = false;
+
+                for (int i = 0; i < seats.size() && !seatFound; i++) {
+                    for (int j = 0; j < seats.get(i).size() && !seatFound; j++) {
+                        if (seats.get(i).get(j) == 1) {
+                            // Mark seat as available
+                            seats.get(i).set(j, 0);
+                            seatFound = true;
+                        }
+                    }
+                }
+
+                train.setSeats(seats);
+
+                // Update train in database
+                List<Train> allTrains = DatabaseManager.loadTrains();
+                for (int i = 0; i < allTrains.size(); i++) {
+                    if (allTrains.get(i).getTrainId().equals(train.getTrainId())) {
+                        allTrains.set(i, train);
+                        break;
+                    }
+                }
+                DatabaseManager.saveTrains(allTrains);
+
+                return true;
+            }
+
+            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

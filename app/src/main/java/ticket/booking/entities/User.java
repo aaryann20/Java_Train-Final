@@ -1,74 +1,114 @@
 package ticket.booking.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
+import java.util.ArrayList;
 import java.util.List;
 
-@JsonNaming (PropertyNamingStrategy.SnakeCaseStrategy.class)
-@JsonIgnoreProperties(ignoreUnknown = true)
+/**
+ * User entity class
+ */
 public class User {
-
-    private String name;
-    private String password;
-    private String hashedPassword;
-    private List<Ticket> ticketsBooked;
     private String userId;
+    private String username;
+    private String password;
+    private String email;
+    private String phone;
+    private String name;
+    private List<Ticket> tickets;
 
-    public User(String name, String password, String hashedPassword, List<Ticket> ticketsBooked, String userId){
-        this.name = name;
+    // Default constructor for Jackson
+    public User() {
+        this.tickets = new ArrayList<>();
+    }
+
+    // Constructor for creating a new user
+    public User(String userId, String username, String password, String email, String phone) {
+        this.userId = userId;
+        this.username = username;
         this.password = password;
-        this.hashedPassword = hashedPassword;
-        this.ticketsBooked = ticketsBooked;
+        this.email = email;
+        this.phone = phone;
+        this.name = username; // Default name to username
+        this.tickets = new ArrayList<>();
+    }
+
+    // Constructor with name
+    public User(String userId, String username, String password, String email, String phone, String name) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+        this.name = name;
+        this.tickets = new ArrayList<>();
+    }
+
+    // Getters and setters
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
         this.userId = userId;
     }
-    public User(){}
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public String getPassword(){
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
         return password;
     }
 
-    public String getHashedPassword() {
-        return hashedPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public List<Ticket> getTicketsBooked() {
-        return ticketsBooked;
+    public String getEmail() {
+        return email;
     }
 
-    public void printTickets(){
-        for (int i = 0; i<ticketsBooked.size(); i++){
-            System.out.println(ticketsBooked.get(i).getTicketInfo());
-        }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getName() {
+        return name != null ? name : username;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setHashedPassword(String hashedPassword) {
-        this.hashedPassword = hashedPassword;
+    public List<Ticket> getTickets() {
+        return tickets;
     }
 
-    public void setTicketsBooked(List<Ticket> ticketsBooked) {
-        this.ticketsBooked = ticketsBooked;
+    public void setTickets(List<Ticket> tickets) {
+        this.tickets = tickets;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void addTicket(Ticket ticket) {
+        if (this.tickets == null) {
+            this.tickets = new ArrayList<>();
+        }
+        this.tickets.add(ticket);
+    }
+
+    public void removeTicket(String ticketId) {
+        if (this.tickets != null) {
+            this.tickets.removeIf(ticket -> ticket.getTicketId().equals(ticketId));
+        }
     }
 }
