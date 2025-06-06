@@ -152,7 +152,34 @@ src/
 
 ## 📸 Screenshots
 
+### Login & Registration
+| Login Screen | Registration Screen |
+|--------------|---------------------|
+| ![Login Screen](screenshots/login.png) | ![Registration Screen](screenshots/register.png) |
 
+### Dashboard & Analytics
+| Main Dashboard | Booking Statistics |
+|----------------|-------------------|
+| ![Dashboard](screenshots/dashboard.png) | ![Statistics](screenshots/statistics.png) |
+
+### Train Search & Booking
+| Search Interface | Train Results | Seat Selection |
+|------------------|---------------|----------------|
+| ![Search Trains](screenshots/search.png) | ![Train Results](screenshots/train-results.png) | ![Seat Selection](screenshots/seat-selection.png) |
+
+### Booking Confirmation
+| Confirmation Dialog |
+|-------------------|
+| ![Booking Confirmed](screenshots/booking-confirmed.png) |
+
+### Key UI Features Demonstrated:
+- **Clean, Modern Interface**: Professional blue gradient theme with intuitive navigation
+- **Interactive Dashboard**: Real-time statistics showing active bookings, available trains, and popular destinations
+- **Advanced Search**: Easy-to-use search form with popular routes for quick selection
+- **Visual Seat Map**: Color-coded seat selection with real-time availability (Green: Available, Red: Booked, Blue: Selected)
+- **Data Visualization**: Route popularity charts and booking analytics
+- **Responsive Design**: Well-organized layout that works across different screen sizes
+- **User-Friendly Dialogs**: Clear confirmation messages and smooth user experience
 
 ## 🚀 Future Enhancements
 
@@ -181,7 +208,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Aaryan Soni**
 - GitHub: [@aaryann20](https://github.com/aaryann20)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/aaryan-soni2004/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aaryan-soni2004/)
 - Email: soniaaryan2020@gmail.com
 
 ## 🙏 Acknowledgments
