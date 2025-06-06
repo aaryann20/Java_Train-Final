@@ -155,22 +155,22 @@ src/
 ### Login & Registration
 | Login Screen | Registration Screen |
 |--------------|---------------------|
-| ![Login Screen](screenshots/login.png) | ![Registration Screen](screenshots/register.png) |
+| ![Login Screen](login.png) | ![Registration Screen](register.png) |
 
 ### Dashboard & Analytics
 | Main Dashboard | Booking Statistics |
 |----------------|-------------------|
-| ![Dashboard](screenshots/dashboard.png) | ![Statistics](screenshots/statistics.png) |
+| ![Dashboard](dashboard.png) | ![Statistics](statistics.png) |
 
 ### Train Search & Booking
 | Search Interface | Train Results | Seat Selection |
 |------------------|---------------|----------------|
-| ![Search Trains](screenshots/search.png) | ![Train Results](screenshots/train-results.png) | ![Seat Selection](screenshots/seat-selection.png) |
+| ![Search Trains](search.png) | ![Train Results](train-results.png) | ![Seat Selection](seat-selection.png) |
 
 ### Booking Confirmation
 | Confirmation Dialog |
 |-------------------|
-| ![Booking Confirmed](screenshots/booking-confirmed.png) |
+| ![Booking Confirmed](booking-confirmed.png) |
 
 ### Key UI Features Demonstrated:
 - **Clean, Modern Interface**: Professional blue gradient theme with intuitive navigation
